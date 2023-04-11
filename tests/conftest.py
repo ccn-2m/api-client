@@ -7,9 +7,9 @@ import requests
 import requests_mock
 import vcr
 
-from apiclient import APIClient
-from apiclient.request_formatters import BaseRequestFormatter
-from apiclient.response_handlers import BaseResponseHandler
+from rest_api_client_toolkit import APIClient
+from rest_api_client_toolkit.request_formatters import BaseRequestFormatter
+from rest_api_client_toolkit.response_handlers import BaseResponseHandler
 
 BASE_DIR = os.path.abspath(os.path.realpath(os.path.dirname(__file__)))
 VCR_CASSETTE_DIR = os.path.join(BASE_DIR, "vcr_cassettes")

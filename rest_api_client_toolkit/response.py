@@ -2,7 +2,7 @@ from typing import Any
 
 import requests
 
-from apiclient.utils.typing import JsonType
+from rest_api_client_toolkit.utils.typing import JsonType
 
 
 class Response:

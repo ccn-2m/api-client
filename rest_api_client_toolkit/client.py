@@ -2,12 +2,12 @@ import logging
 from copy import copy
 from typing import Any, Optional, Type
 
-from apiclient.authentication_methods import BaseAuthenticationMethod, NoAuthentication
-from apiclient.error_handlers import BaseErrorHandler, ErrorHandler
-from apiclient.request_formatters import BaseRequestFormatter, NoOpRequestFormatter
-from apiclient.request_strategies import BaseRequestStrategy, RequestStrategy
-from apiclient.response_handlers import BaseResponseHandler, RequestsResponseHandler
-from apiclient.utils.typing import OptionalDict
+from rest_api_client_toolkit.authentication_methods import BaseAuthenticationMethod, NoAuthentication
+from rest_api_client_toolkit.error_handlers import BaseErrorHandler, ErrorHandler
+from rest_api_client_toolkit.request_formatters import BaseRequestFormatter, NoOpRequestFormatter
+from rest_api_client_toolkit.request_strategies import BaseRequestStrategy, RequestStrategy
+from rest_api_client_toolkit.response_handlers import BaseResponseHandler, RequestsResponseHandler
+from rest_api_client_toolkit.utils.typing import OptionalDict
 
 LOG = logging.getLogger(__name__)
 

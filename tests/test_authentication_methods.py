@@ -2,16 +2,16 @@ import http.cookiejar
 
 import pytest
 
-from apiclient import (
+from rest_api_client_toolkit import (
     APIClient,
     BasicAuthentication,
     HeaderAuthentication,
     NoAuthentication,
     QueryParameterAuthentication,
 )
-from apiclient.authentication_methods import CookieAuthentication
-from apiclient.request_formatters import BaseRequestFormatter, NoOpRequestFormatter
-from apiclient.response_handlers import BaseResponseHandler, RequestsResponseHandler
+from rest_api_client_toolkit.authentication_methods import CookieAuthentication
+from rest_api_client_toolkit.request_formatters import BaseRequestFormatter, NoOpRequestFormatter
+from rest_api_client_toolkit.response_handlers import BaseResponseHandler, RequestsResponseHandler
 
 
 def test_no_authentication_method_does_not_alter_client():

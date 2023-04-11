@@ -2,7 +2,7 @@ from unittest.mock import Mock
 
 import pytest
 
-from apiclient.response import RequestsResponse, Response
+from rest_api_client_toolkit.response import RequestsResponse, Response
 
 
 class TestResponse:

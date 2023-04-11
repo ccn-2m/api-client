@@ -3,8 +3,8 @@
 
 import pytest
 
-from apiclient import JsonRequestFormatter, JsonResponseHandler, NoAuthentication
-from apiclient.exceptions import ClientError, RedirectionError, ServerError, UnexpectedError
+from rest_api_client_toolkit import JsonRequestFormatter, JsonResponseHandler, NoAuthentication
+from rest_api_client_toolkit.exceptions import ClientError, RedirectionError, ServerError, UnexpectedError
 from tests.integration_tests.client import Client, ClientErrorHandler, InternalError, OtherError, Urls
 
 

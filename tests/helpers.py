@@ -4,11 +4,11 @@ from unittest.mock import Mock
 
 import requests
 
-from apiclient import APIClient, JsonRequestFormatter, JsonResponseHandler, NoAuthentication
-from apiclient.request_formatters import BaseRequestFormatter
-from apiclient.request_strategies import BaseRequestStrategy
-from apiclient.response import RequestsResponse, Response
-from apiclient.response_handlers import BaseResponseHandler
+from rest_api_client_toolkit import APIClient, JsonRequestFormatter, JsonResponseHandler, NoAuthentication
+from rest_api_client_toolkit.request_formatters import BaseRequestFormatter
+from rest_api_client_toolkit.request_strategies import BaseRequestStrategy
+from rest_api_client_toolkit.response import RequestsResponse, Response
+from rest_api_client_toolkit.response_handlers import BaseResponseHandler
 
 mock_response_handler_call = Mock()
 mock_request_formatter_call = Mock()

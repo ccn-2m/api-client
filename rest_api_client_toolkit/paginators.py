@@ -2,8 +2,8 @@ from contextlib import contextmanager
 from functools import wraps
 from typing import Callable
 
-from apiclient.client import APIClient
-from apiclient.request_strategies import (
+from rest_api_client_toolkit.client import APIClient
+from rest_api_client_toolkit.request_strategies import (
     BaseRequestStrategy,
     QueryParamPaginatedRequestStrategy,
     UrlPaginatedRequestStrategy,

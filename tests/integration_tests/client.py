@@ -1,10 +1,10 @@
 from enum import IntEnum, unique
 from json import JSONDecodeError
 
-from apiclient import APIClient, endpoint, paginated, retry_request
-from apiclient.error_handlers import ErrorHandler
-from apiclient.exceptions import APIRequestError
-from apiclient.response import Response
+from rest_api_client_toolkit import APIClient, endpoint, paginated, retry_request
+from rest_api_client_toolkit.error_handlers import ErrorHandler
+from rest_api_client_toolkit.exceptions import APIRequestError
+from rest_api_client_toolkit.response import Response
 
 
 def by_query_params_callable(response, prev_params):

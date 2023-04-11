@@ -2,7 +2,7 @@ import os
 
 import pytest
 
-from apiclient import endpoint
+from rest_api_client_toolkit import endpoint
 
 
 @endpoint(base_url="http://foo.com")

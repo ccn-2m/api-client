@@ -3,14 +3,14 @@ from typing import TYPE_CHECKING, Callable
 
 import requests
 
-from apiclient.exceptions import UnexpectedError
-from apiclient.response import RequestsResponse, Response
-from apiclient.utils.typing import OptionalDict
+from rest_api_client_toolkit.exceptions import UnexpectedError
+from rest_api_client_toolkit.response import RequestsResponse, Response
+from rest_api_client_toolkit.utils.typing import OptionalDict
 
 if TYPE_CHECKING:  # pragma: no cover
     # Stupid way of getting around cyclic imports when
     # using typehinting.
-    from apiclient import APIClient
+    from rest_api_client_toolkit import APIClient
 
 
 class BaseRequestStrategy:

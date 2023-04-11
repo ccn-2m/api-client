@@ -1,12 +1,12 @@
 import http.cookiejar
 from typing import TYPE_CHECKING, Dict, Optional, Union
 
-from apiclient.utils.typing import BasicAuthType, OptionalStr
+from rest_api_client_toolkit.utils.typing import BasicAuthType, OptionalStr
 
 if TYPE_CHECKING:  # pragma: no cover
     # Stupid way of getting around cyclic imports when
     # using typehinting.
-    from apiclient import APIClient
+    from rest_api_client_toolkit import APIClient
 
 
 class BaseAuthenticationMethod:

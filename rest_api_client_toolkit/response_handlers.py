@@ -4,9 +4,9 @@ from xml.etree import ElementTree
 
 import requests
 
-from apiclient.exceptions import ResponseParseError
-from apiclient.response import Response
-from apiclient.utils.typing import JsonType, XmlType
+from rest_api_client_toolkit.exceptions import ResponseParseError
+from rest_api_client_toolkit.response import Response
+from rest_api_client_toolkit.utils.typing import JsonType, XmlType
 
 
 class BaseResponseHandler:

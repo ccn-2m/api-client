@@ -43,7 +43,7 @@ pip install api-client
 
 ### Simple Example
 ```python
-from apiclient import APIClient
+from rest_api_client_toolkit import APIClient
 
 class MyClient(APIClient):
 
@@ -74,7 +74,7 @@ For a more complex use case example, see: [Extended example](#Extended-Example)
 ## Retrying
 
 To add some robustness to your client, the power of [tenacity](https://github.com/jd/tenacity)
-has been harnessed to add a `@retry_request` decorator to the `apiclient` toolkit.
+has been harnessed to add a `@retry_request` decorator to the `rest_api_client_toolkit` toolkit.
 
 This will retry any request which responds with a 5xx status_code (which is normally safe
 to do as this indicates something went wrong when trying to make the request), or when an
@@ -87,7 +87,7 @@ their own custom decorator.
 Usage:
 
 ```python
-from apiclient import retry_request
+from rest_api_client_toolkit import retry_request
 
 class MyClient(APIClient):
 
@@ -105,7 +105,7 @@ which waits for 2 seconds between retries and gives up after 5 attempts.
 
 ```python
 import tenacity
-from apiclient.retrying import retry_if_api_request_error
+from rest_api_client_toolkit.retrying import retry_if_api_request_error
 
 retry_decorator = tenacity.retry(
     retry=retry_if_api_request_error(),
@@ -145,7 +145,7 @@ If the response is the last page, the function should return None.
 Usage:
 
 ```python
-from apiclient.paginators import paginated
+from rest_api_client_toolkit.paginators import paginated
 
 
 def next_page_by_params(response, previous_page_params):
@@ -179,7 +179,7 @@ client with various authentication schemes through dependency injection,
 meaning you can change the behaviour of the client without changing the
 underlying implementation.
 
-The apiclient supports the following authentication methods, by specifying
+The rest_api_client_toolkit supports the following authentication methods, by specifying
 the initialized class on initialization of the client, as follows:
 ```python
 client = ClientImplementation(
@@ -320,7 +320,7 @@ following a successful request to the API.  These must inherit from
 `BaseResponseHandler` and implement the `get_request_data()` method which
 will take the `requests.Response` object and parse the data accordingly.
 
-The apiclient supports the following response handlers, by specifying
+The rest_api_client_toolkit supports the following response handlers, by specifying
 the class on initialization of the client as follows:
 
 The response handler can be omitted, in which case no formatting is applied to the
@@ -384,7 +384,7 @@ These must inherit from `BaseRequestFormatter` and implement the `format()`
 method which will take the outgoing `data` object and format accordingly
 before making the request.
 
-The apiclient supports the following request formatters, by specifying
+The rest_api_client_toolkit supports the following request formatters, by specifying
 the class on initialization of the client as follows:
 
 ```python
@@ -458,9 +458,9 @@ Pass the custom error handler into your client upon initialization.
 
 Example:
 ```python
-from apiclient.error_handlers import BaseErrorHandler
-from apiclient import exceptions
-from apiclient.response import Response
+from rest_api_client_toolkit.error_handlers import BaseErrorHandler
+from rest_api_client_toolkit import exceptions
+from rest_api_client_toolkit.response import Response
 
 class MyErrorHandler(BaseErrorHandler):
 
@@ -500,8 +500,8 @@ Example strategy for testing:
 ```python
 from unittest.mock import Mock
 
-from apiclient import APIClient
-from apiclient.request_strategies import BaseRequestStrategy
+from rest_api_client_toolkit import APIClient
+from rest_api_client_toolkit.request_strategies import BaseRequestStrategy
 
 def test_get_method():
     """test that the get method is called on the underlying strategy.
@@ -516,7 +516,7 @@ def test_get_method():
 
 ## Endpoints
 
-The apiclient also provides a convenient way of defining url endpoints with
+The rest_api_client_toolkit also provides a convenient way of defining url endpoints with
 use of the `@endpoint` decorator.  In order to decorate a class with `@endpoint`
 the decorated class must define a `base_url` attribute along with the required
 resources.  The decorator will combine the base_url with the resource.
@@ -524,7 +524,7 @@ resources.  The decorator will combine the base_url with the resource.
 Example:
 
 ```python
-from apiclient import endpoint
+from rest_api_client_toolkit import endpoint
 
 @endpoint(base_url="http://foo.com")
 class Endpoint:
@@ -549,7 +549,7 @@ to pydantic class.
 ## Extended Example
 
 ```python
-from apiclient import (
+from rest_api_client_toolkit import (
     APIClient,
     endpoint,
     paginated,
@@ -558,7 +558,7 @@ from apiclient import (
     JsonResponseHandler,
     JsonRequestFormatter,
 )
-from apiclient.exceptions import APIClientError
+from rest_api_client_toolkit.exceptions import APIClientError
 
 # Define endpoints, using the provided decorator.
 @endpoint(base_url="https://jsonplaceholder.typicode.com")

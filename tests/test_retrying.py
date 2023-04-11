@@ -6,9 +6,9 @@ import pytest
 import six
 import tenacity
 
-from apiclient import retry_request
-from apiclient.exceptions import APIRequestError, ClientError, RedirectionError, ServerError, UnexpectedError
-from apiclient.retrying import retry_if_api_request_error
+from rest_api_client_toolkit import retry_request
+from rest_api_client_toolkit.exceptions import APIRequestError, ClientError, RedirectionError, ServerError, UnexpectedError
+from rest_api_client_toolkit.retrying import retry_if_api_request_error
 
 
 # Testing utils - extracted directly from tenacity testing module:

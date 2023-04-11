@@ -1,6 +1,6 @@
 import pytest
 
-from apiclient.utils.warnings import deprecation_warning
+from rest_api_client_toolkit.utils.warnings import deprecation_warning
 
 
 def test_deprecation_warning():

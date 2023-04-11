@@ -1,6 +1,6 @@
 import json
 
-from apiclient.utils.typing import OptionalJsonType, OptionalStr
+from rest_api_client_toolkit.utils.typing import OptionalJsonType, OptionalStr
 
 
 class BaseRequestFormatter:

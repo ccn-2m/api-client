@@ -2,8 +2,8 @@ from unittest.mock import Mock, call, sentinel
 
 import pytest
 
-from apiclient import APIClient
-from apiclient.request_strategies import (
+from rest_api_client_toolkit import APIClient
+from rest_api_client_toolkit.request_strategies import (
     BaseRequestStrategy,
     QueryParamPaginatedRequestStrategy,
     RequestStrategy,

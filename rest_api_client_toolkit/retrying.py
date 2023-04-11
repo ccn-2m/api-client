@@ -3,7 +3,7 @@ from typing import List
 
 import tenacity
 
-from apiclient.exceptions import APIRequestError
+from rest_api_client_toolkit.exceptions import APIRequestError
 
 
 class retry_if_api_request_error(tenacity.retry_if_exception):

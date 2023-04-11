@@ -1,4 +1,4 @@
-from apiclient.utils.typing import OptionalInt
+from rest_api_client_toolkit.utils.typing import OptionalInt
 
 
 class APIClientError(Exception):

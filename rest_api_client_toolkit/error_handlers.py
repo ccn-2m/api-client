@@ -1,9 +1,9 @@
-from apiclient import exceptions
-from apiclient.response import Response
+from rest_api_client_toolkit import exceptions
+from rest_api_client_toolkit.response import Response
 
 
 class BaseErrorHandler:
-    """Translates a response into an apiclient exception."""
+    """Translates a response into an rest_api_client_toolkit exception."""
 
     @staticmethod
     def get_exception(response: Response) -> exceptions.APIRequestError:

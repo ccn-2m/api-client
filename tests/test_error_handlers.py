@@ -2,8 +2,8 @@ from unittest.mock import sentinel
 
 import pytest
 
-from apiclient.error_handlers import BaseErrorHandler
-from apiclient.response import RequestsResponse
+from rest_api_client_toolkit.error_handlers import BaseErrorHandler
+from rest_api_client_toolkit.response import RequestsResponse
 
 
 class TestBaseExceptionHandler:

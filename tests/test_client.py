@@ -2,10 +2,10 @@ from unittest.mock import Mock, sentinel
 
 import pytest
 
-from apiclient import NoAuthentication
-from apiclient.authentication_methods import BaseAuthenticationMethod
-from apiclient.client import APIClient
-from apiclient.request_strategies import BaseRequestStrategy
+from rest_api_client_toolkit import NoAuthentication
+from rest_api_client_toolkit.authentication_methods import BaseAuthenticationMethod
+from rest_api_client_toolkit.client import APIClient
+from rest_api_client_toolkit.request_strategies import BaseRequestStrategy
 from tests.helpers import MinimalClient, MockRequestFormatter, MockResponseHandler, client_factory
 
 

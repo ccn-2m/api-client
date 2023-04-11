@@ -4,10 +4,10 @@ from xml.etree import ElementTree
 
 import pytest
 
-from apiclient import JsonResponseHandler, RequestsResponseHandler, XmlResponseHandler
-from apiclient.exceptions import ResponseParseError
-from apiclient.response import RequestsResponse
-from apiclient.response_handlers import BaseResponseHandler
+from rest_api_client_toolkit import JsonResponseHandler, RequestsResponseHandler, XmlResponseHandler
+from rest_api_client_toolkit.exceptions import ResponseParseError
+from rest_api_client_toolkit.response import RequestsResponse
+from rest_api_client_toolkit.response_handlers import BaseResponseHandler
 from tests.helpers import build_response
 
 
